@@ -68,4 +68,4 @@ jobs:
       - name: Running zappa
         run: |
           source env/bin/activate
-          zappa update dev
+          zappa deploy dev
