@@ -27,12 +27,12 @@ def lambda_handler(event, context):
     # Crear sesión Spark
     # spark = SparkSession.builder.appName("GlueJobSimulation").getOrCreate()
 
-    conn = mysql.connector.connect(**mysql_config)
-    cursor = conn.cursor()
+    
     # Conexión a MySQL
     try:
         
-
+    conn = mysql.connector.connect(**mysql_config)
+    cursor = conn.cursor()
         # Obtener datos de clientes y películas
         cursor.execute("SELECT customer_id FROM customer")
         customers = [row[0] for row in cursor.fetchall()]
